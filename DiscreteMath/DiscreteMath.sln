@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscreteMath", "DiscreteMath\DiscreteMath.csproj", "{68BAAC96-3430-49BC-A1BE-89F90B9D613A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68BAAC96-3430-49BC-A1BE-89F90B9D613A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68BAAC96-3430-49BC-A1BE-89F90B9D613A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68BAAC96-3430-49BC-A1BE-89F90B9D613A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68BAAC96-3430-49BC-A1BE-89F90B9D613A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
