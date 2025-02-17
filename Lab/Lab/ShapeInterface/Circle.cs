@@ -1,14 +1,20 @@
 namespace Lab.ShapeInterface;
 
-public class Circle(string name) : NameClass(name), IPerimeterArea
+public class Circle(string name, double radius) : NameClass(name), IPerimeterArea
 {
-    public double CalculatePerimeter(float value)
+    public double Radius { get; } = radius;
+    
+    public double CalculatePerimeter(double value)
     {
-        return 2 * Math.PI * value;
+        double perimeter = 2 * Math.PI * value;
+        Console.WriteLine($"The perimeter of the Circle is {perimeter}");
+        return perimeter;
     }
 
-    public double CalculateArea(float value)
+    public double CalculateArea(double value)
     {
-        return 2 * Math.PI * value * value;
+        double area = 2 * Math.PI * value * value;
+        Console.WriteLine($"The perimeter of the Circle is {area}");
+        return area;
     }
 }

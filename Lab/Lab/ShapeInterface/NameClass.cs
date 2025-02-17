@@ -2,10 +2,10 @@ namespace Lab.ShapeInterface;
 
 public class NameClass
 {
-    private string _name = "";
- 
+    public string Name { get; }
+
     public NameClass(string name)
     {
-        _name = name;
+        Name = name;
     }
 }

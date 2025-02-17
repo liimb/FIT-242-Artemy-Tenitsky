@@ -2,6 +2,6 @@ namespace Lab.ShapeInterface;
 
 public interface IPerimeterArea
 {
-    public double CalculatePerimeter(float value);
-    public double CalculateArea(float value);
+    public double CalculatePerimeter(double value);
+    public double CalculateArea(double value);
 }

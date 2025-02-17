@@ -1,14 +1,20 @@
 namespace Lab.ShapeInterface;
 
-public class Square(string name) : NameClass(name), IPerimeterArea
+public class Square(string name, double length) : NameClass(name), IPerimeterArea
 {
-    public double CalculatePerimeter(float value)
+    public double Length { get; } = length;
+    
+    public double CalculatePerimeter(double value)
     {
-        return 4 * value;
+        double perimeter = 4 * value;
+        Console.WriteLine($"The perimeter of the Square is {perimeter}");
+        return perimeter;
     }
 
-    public double CalculateArea(float value)
+    public double CalculateArea(double value)
     {
-        return value * value;
+        double area = value * value;
+        Console.WriteLine($"The area of the Square is {area}");
+        return area;
     }
 }
