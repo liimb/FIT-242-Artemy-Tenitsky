@@ -16,22 +16,42 @@ public class KraskalAlg
         for (int i = 2; i < edges.Count; i++)
         {
             Edge edge = edges[i];
+            List<int> vertex = new();
+            int vertW = 0;
+            int w = 0;
+            int index = -1;
 
             for (int j = 0; j < vertexList.Count; j++)
             {
-                if(!(vertexList[j].Contains(edge.V1))
+                foreach (var x1 in vertexList[j]) vertex.Add(x1);
+
+                if (vertexList[j].Contains(edge.V1) && !vertexList[j].Contains(edge.V2))
                 {
-                    
-                } 
-                else if (vertexList[j].Contains(edge.V2))
-                {
-                    
+                    index = j;
+                    vertW = edge.V2;
+                    w = edge.Weight;
                 }
-                for (int k = 0; k < vertexList[j].Count; k++)
+
+                if (vertexList[j].Contains(edge.V2) && !vertexList[j].Contains(edge.V1))
                 {
-                    if(vertexList[j][kedge.V1)
+                    index = j;
+                    vertW = edge.V1;
+                    w = edge.Weight;
                 }
             }
+
+            if (index != -1)
+            {
+                vertexList[index].Add(vertW);
+                length += w;
+            }
+            else
+            {
+                vertexList.Add([edge.V1, edge.V2]);
+                length += w;
+            }
+
+            if (vertex.Count >= graph.GetLength(0)) break;
         }
         
         return length;
