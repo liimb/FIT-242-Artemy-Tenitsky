@@ -1,66 +1,30 @@
-﻿namespace DiscreteMath;
+﻿using DiscreteMath.TreeAlgorithm;
+
+namespace DiscreteMath;
 
 public static class Program
 {
     private static void Main(string[] args)
     {
-        int[,] graph = // 3
+        int[,] graph1 =
         {
-            {0, 1, 0, 0},
-            {1, 0, 0, 0},
-            {0, 0, 0, 0},
-            {0, 0, 0, 0}
+            {0, 9, 0, 0, 0, 4, 9},
+            {9, 0, 0, 0, 2, 0, 0},
+            {0, 0, 0, 8, 7, 0, 0},
+            {0, 0, 8, 0, 15, 1, 0},
+            {0, 2, 7, 15, 0, 0, 6},
+            {4, 0, 0, 1, 0, 0, 0},
+            {9, 0, 0, 0, 6, 0, 0}
         };
+
+        Console.WriteLine();
         
-        int[,] graph1 = // 1
-        {
-            {0, 1, 1, 0},
-            {1, 0, 1, 1},
-            {1, 1, 0, 1},
-            {0, 1, 1, 0}
-        };
-        
-        int[,] graph2 = // 2
-        {
-            {0, 1, 0, 0},
-            {1, 0, 0, 0},
-            {0, 0, 0, 1},
-            {0, 0, 1, 0}
-        };
-        
-        int[,] graph3 = // 3
-        {
-            {0, 1, 0, 0, 0},
-            {1, 0, 0, 0, 0},
-            {0, 0, 0, 1, 0},
-            {0, 0, 1, 0, 0},
-            {0, 0, 0, 0, 0}
-        };
-        
-        int[,] graph4 = // 4
-        {
-            {0, 0, 0, 0},
-            {0, 0, 0, 0},
-            {0, 0, 0, 0},
-            {0, 0, 0, 0}
-        };
-        
-        int[,] graph5 = // 1
-        {
-            {0, 1, 1, 1},
-            {1, 0, 1, 1},
-            {1, 1, 0, 1},
-            {1, 1, 1, 0}
-        };
+        PrimaAlg primaAlg = new PrimaAlg();
+        Console.WriteLine(primaAlg.GetTreeLength(graph1));
         
         Console.WriteLine();
         
-        AlgorithmOne algorithmOne = new AlgorithmOne();
-        Console.WriteLine(algorithmOne.GetConnectivityComponentCount(graph5));
-        
-        Console.WriteLine();
-        
-        AlgorithmTwo algorithmTwo = new AlgorithmTwo();
-        Console.WriteLine(algorithmTwo.GetConnectivityComponentCount(graph5));
+        KraskalAlg kraskalAlg = new KraskalAlg();
+        Console.WriteLine(kraskalAlg.GetTreeLength(graph1));
     }
 }

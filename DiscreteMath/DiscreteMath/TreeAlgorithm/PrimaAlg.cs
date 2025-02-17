@@ -6,18 +6,50 @@ public class PrimaAlg
     {
         int length = 0;
         List<int> vertexes = new();
-        List<Edge> edges = new();
+        List<int> secVert = new();
+        List<Edge> edges = EdgeInitializator.GetEdges(graph);
 
         for (int i = 0; i < graph.GetLength(0); i++)
         {
             vertexes.Add(i);
         }
-
-        for (int i = 0; i < graph.GetLength(0); i++)
+        
+        secVert.Add(vertexes[0]);
+        vertexes.RemoveAt(0);
+        
+        
+        while (vertexes.Count > 0)
         {
-            for (int j = 0; j < graph.GetLength(1); j++)
+            Edge minEdge = null;
+            int minWeight = int.MaxValue;
+
+            foreach (var edge in edges)
             {
-                edges.Add(new Edge(i, j, graph[i, j]));
+                if ((secVert.Contains(edge.V1) && vertexes.Contains(edge.V2)) ||
+                    (secVert.Contains(edge.V2) && vertexes.Contains(edge.V1)))
+                {
+                    if (edge.Weight < minWeight)
+                    {
+                        minWeight = edge.Weight;
+                        minEdge = edge;
+                    }
+                }
+            }
+
+            if (minEdge != null)
+            {
+                length += minWeight;
+
+                if (vertexes.Contains(minEdge.V1))
+                {
+                    secVert.Add(minEdge.V1);
+                    vertexes.Remove(minEdge.V1);
+                }
+                else if (vertexes.Contains(minEdge.V2))
+                {
+                    secVert.Add(minEdge.V2);
+                    vertexes.Remove(minEdge.V2);
+                }
             }
         }
         
