@@ -2,7 +2,7 @@ namespace Lab.ShapeInterface;
 
 public class ShapeInitializator
 {
-    public static void Main(string[] args)
+    public void Main(string[] args)
     {
         Circle circle = new Circle("circle", 3d);
         Square square = new Square("square", 3d);
