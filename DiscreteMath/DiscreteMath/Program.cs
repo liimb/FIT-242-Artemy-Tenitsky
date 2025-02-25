@@ -2,9 +2,9 @@
 
 namespace DiscreteMath;
 
-public static class Program
+public class Program
 {
-    private static void Main(string[] args)
+    private void Main(string[] args)
     {
         int[,] graph1 =
         {
