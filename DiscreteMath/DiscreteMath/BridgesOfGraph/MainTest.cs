@@ -2,7 +2,7 @@ namespace DiscreteMath.BridgesOfGraph;
 
 public class MainTest
 {
-    public static void Main(string[] args)
+    public void Main(string[] args)
     {
         int[,] graph = 
         {       //0  1  2  3  4  5  6

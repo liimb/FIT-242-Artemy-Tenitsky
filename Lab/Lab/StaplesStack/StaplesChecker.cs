@@ -11,7 +11,7 @@ public class StaplesChecker
         {'}', '{'},
     };
     
-    public static void Main(string[] args)
+    public void Main(string[] args)
     {
         String test1 = "1(23)j{d[j84]7}fb"; //true
         String test2 = "1(23)j{dj84]7}fb"; //false
