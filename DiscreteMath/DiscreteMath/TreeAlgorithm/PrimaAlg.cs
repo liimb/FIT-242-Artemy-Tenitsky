@@ -7,7 +7,7 @@ public class PrimaAlg
         int length = 0;
         List<int> vertexes = new();
         List<int> secVert = new();
-        List<Edge> edges = EdgeInitializator.GetEdges(graph);
+        List<Edge> edges = EdgeInitializator.GetEdges(graph, false);
 
         for (int i = 0; i < graph.GetLength(0); i++)
         {

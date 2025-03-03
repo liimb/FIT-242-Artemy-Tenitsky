@@ -2,7 +2,7 @@ namespace DiscreteMath.TreeAlgorithm;
 
 public class EdgeInitializator
 {
-    public static List<Edge> GetEdges(int[,] graph)
+    public static List<Edge> GetEdges(int[,] graph, bool isDirected)
     {
         var edges = new List<Edge>();
         int a = 0;
@@ -13,8 +13,11 @@ public class EdgeInitializator
             {
                 if (graph[i, j] != 0 && i < j)
                 {
-                    Edge edge = new Edge(i, j, graph[i, j]);
-                    edges.Add(edge);
+                    if (isDirected || i < j)
+                    {
+                        Edge edge = new Edge(i, j, graph[i, j]);
+                        edges.Add(edge);
+                    }
                 }
             }
         }

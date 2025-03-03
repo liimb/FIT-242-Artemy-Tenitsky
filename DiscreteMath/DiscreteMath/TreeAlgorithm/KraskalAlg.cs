@@ -6,7 +6,7 @@ public class KraskalAlg
     {
         int length = 0;
         
-        List<Edge> edges = EdgeInitializator.GetEdges(graph);
+        List<Edge> edges = EdgeInitializator.GetEdges(graph, false);
         List<List<int>> vertexList = new();
         vertexList.Add([edges[0].V1, edges[0].V2]);
         vertexList.Add([edges[1].V1, edges[1].V2]);
