@@ -2,7 +2,7 @@ namespace Lab.StackPlusHashSetDictionary;
 
 public class Initializer
 {
-    public static void Main(string[] args)
+    public void Main(string[] args)
     {
         PolishExpression expression = new PolishExpression();
         expression.GetPolishExpressionValue("3 2 * 5 +");
