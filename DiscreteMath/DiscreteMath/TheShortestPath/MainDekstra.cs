@@ -2,7 +2,7 @@ namespace DiscreteMath.TheShortestPath;
 
 public class MainDekstra
 {
-    public static void Main(string[] args)
+    public void Main(string[] args)
     {
         int[,] graph =
         {
