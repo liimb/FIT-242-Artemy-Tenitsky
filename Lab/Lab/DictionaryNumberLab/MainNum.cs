@@ -8,7 +8,7 @@ public class MainNum
     public static FirstDelegate FirstOperations;
     public static SecondDelegate SecondOperations;
     
-    public static void Main(string[] args)
+    public void Main(string[] args)
     {
         List<Phone> phones = new List<Phone>();
         phones.Add(new Phone("+35987654321", "mts"));
