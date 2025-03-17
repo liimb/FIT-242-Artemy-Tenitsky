@@ -2,7 +2,7 @@ namespace DiscreteMath.FordBellman;
 
 public class BellmanAlg
 {
-    public static void Main(string[] args)
+    public void Main(string[] args)
     {
         int[,] graph = {
             { 0, 1, 0, 0, 3 },
