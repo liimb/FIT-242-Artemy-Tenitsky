@@ -4,7 +4,7 @@ public class Washer
 {
     delegate void CarWasher(Car car);
     
-    public static void Main(string[] args)
+    public void Main(string[] args)
     {
         Garage garage = new Garage(new List<Car>()
         {
