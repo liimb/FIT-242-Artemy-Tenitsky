@@ -21,11 +21,11 @@ public class MainTrack
         
         while (IsRunnerFinished(runners, track) == null)
         {
-            someRunner1.CurrentX += someRunner1.Speed;
-            someRunner2.CurrentX += someRunner2.Speed;
-            someRunner3.CurrentX += someRunner3.Speed;
+            int time = random.Next(100);
             
-            Thread.Sleep(random.Next(100));
+            someRunner1.CurrentX += someRunner1.Speed / time;
+            someRunner2.CurrentX += someRunner2.Speed / time;
+            someRunner3.CurrentX += someRunner3.Speed / time;
         }
         
         runnerEvent.EventRunner += FinishEvent.DisplayMessage;
