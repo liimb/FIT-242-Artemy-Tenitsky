@@ -2,29 +2,18 @@ namespace DiscreteMath.FloidAlg;
 
 public class FloidPaths
 {
-    public static void Main(string[] args)
+    public void Main(string[] args)
     {
-        double[,] graph =
-        {
-            { 0, 10, 18, 8, double.PositiveInfinity, double.PositiveInfinity }, 
-            { 10, 0, 16, 9, 21, double.PositiveInfinity }, 
-            { double.PositiveInfinity, 16, 0, double.PositiveInfinity, double.PositiveInfinity, 15 },
-            {7, 9, double.PositiveInfinity, 0, double.PositiveInfinity, 12},
-            {double.PositiveInfinity, double.PositiveInfinity, double.PositiveInfinity, double.PositiveInfinity, 0, 23},
-            {double.PositiveInfinity, double.PositiveInfinity, 15, double.PositiveInfinity,23,0}
-        };
-        
         int[,] graphi =
         {
-            { 0, 10, 18, 8, int.MaxValue, int.MaxValue }, 
-            { 10, 0, 16, 9, 21, int.MaxValue }, 
-            { int.MaxValue, 16, 0, int.MaxValue, int.MaxValue, 15 },
-            {7, 9, int.MaxValue, 0, int.MaxValue, 12},
-            {int.MaxValue, int.MaxValue, int.MaxValue, int.MaxValue, 0, 23},
-            {int.MaxValue, int.MaxValue, 15, int.MaxValue,23,0}
+            { 0, 2, int.MaxValue, 19, 19 }, 
+            { 2, 0, 6, 14, int.MaxValue }, 
+            { 21, 6, 0, 1, 13 },
+            {int.MaxValue, 6, 1, 0, 2 },
+            {7, 11, 6, 2, 0},
         };
         
-        PrintArray(GetMinPaths(graphi));
+        GetMinPaths(graphi);
     }
     
     public static int[,] GetMinPaths(int[,] graph)
@@ -38,18 +27,20 @@ public class FloidPaths
             {
                 for (int y = 0; y < verticesCount; y++)
                 {
-                    if (paths[x, k] != int.MaxValue && paths[k, y] != int.MaxValue)
+                    if (paths[x, k] != int.MaxValue && paths[k, y] != int.MaxValue && x != y)
                     {
                         paths[x, y] = Math.Min(paths[x, k] + paths[k, y], paths[x, y]);
                     }
                 }
             }
+            
+            PrintArray(paths);
         }
 
         return paths;
     }
     
-    static void PrintArray(int[,] array)
+    public static void PrintArray(int[,] array)
     {
         int rows = array.GetLength(0);
 
