@@ -7,4 +7,15 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+  	<None Update="/MineFieldTestsFiles/input_s1_01.txt">
+    	   <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  	</None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="RGR\CitiesTests\" />
+      <Folder Include="RGR\SphereDisTests\" />
+    </ItemGroup>
+
 </Project>

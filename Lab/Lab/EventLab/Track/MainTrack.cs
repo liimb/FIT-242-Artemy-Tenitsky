@@ -2,7 +2,7 @@ namespace Lab.EventLab.Track;
 
 public class MainTrack
 {
-    public static void Main(string[] args)
+    public void Main(string[] args)
     {
         Track track = new Track(10, 200);
         
