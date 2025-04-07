@@ -2,7 +2,7 @@ namespace Lab.RGR;
 
 public class Cities
 {
-    private static void Main()
+    private void Main()
     {
         string input = "fullPath/input_s1_01.txt";
         
