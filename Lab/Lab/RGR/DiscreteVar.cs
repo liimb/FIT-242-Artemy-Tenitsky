@@ -20,25 +20,50 @@ public class DiscreteVar
                 graph[i, j] = int.Parse(row[j]);
             }
         }
-        
+
+        GetFordBellmanPaths(graph, 0);
+
+    }
+    
+    public static int[] GetFordBellmanPaths(int[,] graph, int start)
+    {
         int verticesCount = graph.GetLength(0);
-        int[,] paths = (int[,])graph.Clone();
-        
-        for (int k = 0; k < verticesCount; k++)
+        int[] distance = new int[verticesCount];
+
+        for (int i = 0; i < verticesCount; i++)
         {
-            for (int x = 0; x < verticesCount; x++)
+            distance[i] = int.MaxValue;
+        }
+
+        distance[start] = 0;
+
+        for (int k = 0; k < verticesCount - 1; k++)
+        {
+            for (int i = 0; i < verticesCount; i++)
             {
-                for (int y = 0; y < verticesCount; y++)
+                for (int j = 0; j < verticesCount; j++)
                 {
-                    if (paths[x, k] != int.MaxValue && paths[k, y] != int.MaxValue && x != y)
+                    if (graph[i, j] != 0 && distance[i] != int.MaxValue &&
+                        distance[i] + graph[i, j] < distance[j])
                     {
-                        paths[x, y] = Math.Min(paths[x, k] + paths[k, y], paths[x, y]);
+                        distance[j] = distance[i] + graph[i, j];
                     }
                 }
             }
-            
-            PrintArray(paths);
         }
+        
+        for (int i = 0; i < verticesCount; i++)
+        {
+            for (int j = 0; j < verticesCount; j++)
+            {
+                if (distance[j] > distance[i] + graph[i, j])
+                {
+                    Console.WriteLine("отриц вес");
+                }
+            }
+        }
+
+        return distance;
     }
     
     public static void PrintArray(int[,] array)
