@@ -2,7 +2,7 @@ namespace DiscreteMath.Wave;
 
 public class WaveAlgorithm
 {
-    public static void Main(string[] args)
+    public void Main(string[] args)
     {
         string[,] field =
         {

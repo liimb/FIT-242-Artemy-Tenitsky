@@ -2,7 +2,7 @@ namespace Lab.RGR;
 
 public class DiscreteVar
 {
-    public static void Main(string[] args)
+    public void Main(string[] args)
     {
         string path = "/Users/artemiy/Repositories/Polikek/FIT-242-Artemy-Tenitsky/Lab/Lab/RGR/inputDis.txt";
         string[] input = File.ReadAllLines(path);
