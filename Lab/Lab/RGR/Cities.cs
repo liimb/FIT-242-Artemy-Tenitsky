@@ -4,7 +4,7 @@ public class Cities
 {
     private void Main()
     {
-        string input = "fullPath/input_s1_01.txt";
+        string input = "/Users/artemiy/Repositories/Politech/FIT-242-Artemy-Tenitsky/Lab/Lab/RGR/CitiesTests/input_s1_07.txt";
         
         string[] lines = File.ReadAllLines(input);
         

@@ -2,7 +2,7 @@ namespace Lab.Structures;
 
 public class MainLibrary
 {
-    private static void Main(string[] args)
+    private void Main(string[] args)
     {
         var book1 = new Book("1", "a", "", "");
         var book2 = new Book("2", "b", "", "");

@@ -4,7 +4,7 @@ public class SphereDistance
 {
     public void Main(string[] args)
     {
-        string input = "fullPath/input7.txt";
+        string input = "/Users/artemiy/Repositories/Politech/FIT-242-Artemy-Tenitsky/Lab/Lab/RGR/SphereDisTests/input11.txt";
         
         string[] lines = File.ReadAllLines(input);
         

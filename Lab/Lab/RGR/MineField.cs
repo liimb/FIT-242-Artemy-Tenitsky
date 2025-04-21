@@ -4,7 +4,7 @@ public class MineField
 {
     public void Main(string[] args)
     {
-        string input = "fullPath/input_s1_03.txt";
+        string input = "/Users/artemiy/Repositories/Politech/FIT-242-Artemy-Tenitsky/Lab/Lab/RGR/MineFieldTestsFiles/input_s1_06.txt";
         
         string[] lines = File.ReadAllLines(input);
         

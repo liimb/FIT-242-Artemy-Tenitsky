@@ -4,7 +4,7 @@ public class Square
 {
     private void Main()
     {
-        string path = "/Users/artemiy/Repositories/Polikek/FIT-242-Artemy-Tenitsky/Lab/Lab/RGR/SquareTests/input_s1_16.txt";
+        string path = "/Users/artemiy/Repositories/Politech/FIT-242-Artemy-Tenitsky/Lab/Lab/RGR/SquareTests/input_s1_13.txt";
         string[] input = File.ReadAllLines(path);
         
         string[] nm = input[0].Split();
