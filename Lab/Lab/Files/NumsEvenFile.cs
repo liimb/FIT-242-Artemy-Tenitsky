@@ -2,7 +2,7 @@ namespace Lab.Files;
 
 public class NumsEvenFile
 {
-    public static void Main(string[] args)
+    public void Main(string[] args)
     {
         string input = "/Users/artemiy/Repositories/Politech/FIT-242-Artemy-Tenitsky/Lab/Lab/Files/input.txt";
         

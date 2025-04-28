@@ -2,15 +2,17 @@ namespace DiscreteMath.FloidAlg;
 
 public class FloidPaths
 {
-    public void Main(string[] args)
+    public static void Main(string[] args)
     {
         int[,] graphi =
         {
-            { 0, 2, int.MaxValue, 19, 19 }, 
-            { 2, 0, 6, 14, int.MaxValue }, 
-            { 21, 6, 0, 1, 13 },
-            {int.MaxValue, 6, 1, 0, 2 },
-            {7, 11, 6, 2, 0},
+            { int.MaxValue, 3, int.MaxValue, int.MaxValue, 2,3,int.MaxValue }, 
+            { int.MaxValue, int.MaxValue, int.MaxValue, int.MaxValue, -4,6,int.MaxValue }, 
+            { int.MaxValue, -2, int.MaxValue, 7, int.MaxValue,10,int.MaxValue },
+            {int.MaxValue, int.MaxValue, int.MaxValue, int.MaxValue, int.MaxValue,int.MaxValue,2 },
+            {int.MaxValue, int.MaxValue, 4, int.MaxValue, int.MaxValue,int.MaxValue,int.MaxValue},
+            {int.MaxValue,int.MaxValue,int.MaxValue,-2,int.MaxValue,int.MaxValue,int.MaxValue},
+            {int.MaxValue,int.MaxValue,-8,int.MaxValue,int.MaxValue,int.MaxValue,int.MaxValue}
         };
         
         GetMinPaths(graphi);
