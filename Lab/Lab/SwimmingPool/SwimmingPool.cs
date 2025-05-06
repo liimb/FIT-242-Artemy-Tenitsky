@@ -2,7 +2,7 @@ namespace Lab.SwimmingPool;
 
 public class SwimmingPool
 {
-    public static void Main(string[] args)
+    public void Main(string[] args)
     {
         List<Instructor> instructors = new()
         {
