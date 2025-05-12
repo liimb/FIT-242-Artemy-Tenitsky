@@ -6,7 +6,7 @@ public class Store
     public static List<Provider> Providers { get; set; } = new();
     public static List<ProductMovement> Movements { get; set; } = new();
     
-    public static void Main(string[] args)
+    public void Main(string[] args)
     {
         Product product1 = new Product(1, "Ноутбук");
         Product product2 = new Product(2, "Монитор");
