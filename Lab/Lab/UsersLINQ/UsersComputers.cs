@@ -21,7 +21,7 @@ public class UsersComputers
         new Computer(4, "Asus", "2021", "Linux")
     };
     
-    public static void Main(string[] args)
+    public void Main(string[] args)
     {
         int choice = -1;
 
