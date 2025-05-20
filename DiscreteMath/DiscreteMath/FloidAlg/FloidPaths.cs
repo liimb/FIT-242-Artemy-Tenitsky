@@ -2,7 +2,7 @@ namespace DiscreteMath.FloidAlg;
 
 public class FloidPaths
 {
-    public static void Main(string[] args)
+    public void Main(string[] args)
     {
         int[,] graphi =
         {
