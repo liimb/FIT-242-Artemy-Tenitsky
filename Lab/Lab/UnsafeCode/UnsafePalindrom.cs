@@ -4,7 +4,7 @@ namespace Lab.UnsafeCode;
 
 public unsafe class UnsafePalindrom
 {
-    private static void Main(string[] args)
+    private void Main(string[] args)
     {
         Console.WriteLine("Введите кол-во элементов");
         
