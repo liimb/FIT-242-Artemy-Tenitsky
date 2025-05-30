@@ -2,7 +2,7 @@ namespace Lab.UnsafeCode;
 
 public unsafe class UnsafeArray
 {
-    public static void Main()
+    public void Main()
     {
         Console.Write("Введите количество строк: ");
         int stringCount = int.Parse(Console.ReadLine()!);
